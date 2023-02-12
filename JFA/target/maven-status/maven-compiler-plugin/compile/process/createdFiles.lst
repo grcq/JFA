@@ -1,0 +1,6 @@
+cf\grcq\MyClass.class
+cf\grcq\processing\AnnotationProcessingHandler.class
+cf\grcq\Main.class
+cf\grcq\processing\test\TestProcessor.class
+META-INF\services\javax.annotation.processing.Processor
+cf\grcq\processing\test\Test.class
