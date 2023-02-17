@@ -1,0 +1,4 @@
+Can-Redefine-Classes: true
+Can-Retransform-Classes: true
+Premain-Class: dev.grcq.Premain
+Main-Class: dev.grcq.Main

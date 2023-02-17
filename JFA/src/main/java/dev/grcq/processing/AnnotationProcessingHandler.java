@@ -1,9 +1,8 @@
-package cf.grcq.processing;
+package dev.grcq.processing;
 
 import com.google.auto.service.AutoService;
 
 import javax.annotation.processing.AbstractProcessor;
-import javax.annotation.processing.Processor;
 import javax.annotation.processing.RoundEnvironment;
 import javax.lang.model.SourceVersion;
 import javax.lang.model.element.Element;
@@ -11,7 +10,6 @@ import javax.lang.model.element.TypeElement;
 import java.lang.annotation.Annotation;
 import java.util.Set;
 
-@AutoService(Processor.class)
 public abstract class AnnotationProcessingHandler<T> extends AbstractProcessor {
 
     abstract public void handle(Element element, T t);

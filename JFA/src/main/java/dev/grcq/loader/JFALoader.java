@@ -1,4 +1,4 @@
-package cf.grcq.loader;
+package dev.grcq.loader;
 
 public class JFALoader extends ClassLoader {
 

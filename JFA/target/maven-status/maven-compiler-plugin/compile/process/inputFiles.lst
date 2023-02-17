@@ -1,5 +1,12 @@
-C:\Users\lucas\Documents\GitHub\JFA\JFA\src\main\java\cf\grcq\processing\AnnotationProcessingHandler.java
-C:\Users\lucas\Documents\GitHub\JFA\JFA\src\main\java\cf\grcq\processing\test\TestProcessor.java
-C:\Users\lucas\Documents\GitHub\JFA\JFA\src\main\java\cf\grcq\Main.java
-C:\Users\lucas\Documents\GitHub\JFA\JFA\src\main\java\cf\grcq\MyClass.java
-C:\Users\lucas\Documents\GitHub\JFA\JFA\src\main\java\cf\grcq\processing\test\Test.java
+/Users/07lucvad/Documents/Coding 2/Java/JFA/JFA/src/main/java/dev/grcq/processing/AnnotationByteCodeHandler.java
+/Users/07lucvad/Documents/Coding 2/Java/JFA/JFA/src/main/java/dev/grcq/Main.java
+/Users/07lucvad/Documents/Coding 2/Java/JFA/JFA/src/main/java/dev/grcq/Premain.java
+/Users/07lucvad/Documents/Coding 2/Java/JFA/JFA/src/main/java/dev/grcq/processing/TestHandler.java
+/Users/07lucvad/Documents/Coding 2/Java/JFA/JFA/src/main/java/dev/grcq/processing/AnnotationProcessingHandler.java
+/Users/07lucvad/Documents/Coding 2/Java/JFA/JFA/src/main/java/dev/grcq/utils/TestClass.java
+/Users/07lucvad/Documents/Coding 2/Java/JFA/JFA/src/main/java/dev/grcq/utils/ProcessingUtils.java
+/Users/07lucvad/Documents/Coding 2/Java/JFA/JFA/src/main/java/dev/grcq/bytecode/JFAMethod.java
+/Users/07lucvad/Documents/Coding 2/Java/JFA/JFA/src/main/java/dev/grcq/loader/JFALoader.java
+/Users/07lucvad/Documents/Coding 2/Java/JFA/JFA/src/main/java/dev/grcq/bytecode/JFAClass.java
+/Users/07lucvad/Documents/Coding 2/Java/JFA/JFA/src/main/java/dev/grcq/processing/Test.java
+/Users/07lucvad/Documents/Coding 2/Java/JFA/JFA/src/main/java/dev/grcq/bytecode/JFAModifier.java
