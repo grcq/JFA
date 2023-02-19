@@ -15,34 +15,37 @@ public class Premain {
 
     public static void premain(String args, Instrumentation inst) {
         System.out.println("a");
-        inst.addTransformer((loader, className, classBeingRedefined, protectionDomain, classfileBuffer) -> {
-            for (AnnotationByteCodeHandler<?> handler : ProcessingUtils.getAllByteCodeHandlers()) {
-                System.out.println("b");
+        inst.addTransformer(new ClassFileTransformer() {
+            @Override
+            public byte[] transform(ClassLoader loader, String className, Class<?> classBeingRedefined, ProtectionDomain protectionDomain, byte[] classfileBuffer) throws IllegalClassFormatException {
+                for (AnnotationByteCodeHandler<?> handler : ProcessingUtils.getAllByteCodeHandlers()) {
+                    System.out.println("b");
 
-                Class<? extends Annotation> anno = null;
-                try {
-                    anno = (Class<? extends Annotation>) Class.forName(handler.getFqdn());
-                } catch (Exception e) {
-                    e.printStackTrace();
-                    return classfileBuffer;
-                }
-
-                System.out.println(anno);
-
-                if (classBeingRedefined.isAnnotationPresent(anno)) {
-                    JFAClass clazz = new JFAClass(classBeingRedefined);
-
+                    Class<? extends Annotation> anno = null;
                     try {
-                        Annotation annotation = anno.newInstance();
-                        clazz = handler.process(annotation, clazz);
+                        anno = (Class<? extends Annotation>) Class.forName(handler.getFqdn());
                     } catch (Exception e) {
-                        throw new RuntimeException(e);
+                        e.printStackTrace();
+                        return classfileBuffer;
                     }
 
-                    return clazz.toBytes();
+                    System.out.println(anno);
+
+                    if (classBeingRedefined.isAnnotationPresent(anno)) {
+                        JFAClass clazz = new JFAClass(classBeingRedefined);
+
+                        try {
+                            Annotation annotation = anno.newInstance();
+                            clazz = handler.process(annotation, clazz);
+                        } catch (Exception e) {
+                            throw new RuntimeException(e);
+                        }
+
+                        return clazz.toBytes();
+                    }
                 }
+                return new byte[0];
             }
-            return new byte[0];
         });
     }
 
