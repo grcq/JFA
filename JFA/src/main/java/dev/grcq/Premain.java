@@ -34,12 +34,8 @@ public class Premain {
                     if (classBeingRedefined.isAnnotationPresent(anno)) {
                         JFAClass clazz = new JFAClass(classBeingRedefined);
 
-                        try {
-                            Annotation annotation = anno.newInstance();
-                            clazz = handler.process(annotation, clazz);
-                        } catch (Exception e) {
-                            throw new RuntimeException(e);
-                        }
+                        Annotation annotation = classBeingRedefined.getAnnotation(anno);
+                        clazz = handler.process(annotation, clazz);
 
                         return clazz.toBytes();
                     }
